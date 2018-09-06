@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSObject+MTX.h"
 
 @interface ViewController ()
 
@@ -14,11 +15,28 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [ViewController swizzelInstanceMethod:@selector(viewDidLoad) with:@selector(swizzeledViewDidLoad)];
+    });
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSLog(@"viewDidLoad");
+    
+    [self performSelector:@selector(test) afterDelay:1.0f];
+}
+
+- (void)swizzeledViewDidLoad {
+    NSLog(@"swizzeledViewDidLoad");
+    [self swizzeledViewDidLoad];
+}
+
+-(void)test {
+    NSLog(@"===test====");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2C6F052140D2B2002C6823 /* NSObject+MTX.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2C6F042140D2B2002C6823 /* NSObject+MTX.m */; };
 		AA9A53082140C8A800263317 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A53072140C8A800263317 /* AppDelegate.m */; };
 		AA9A530B2140C8A800263317 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A530A2140C8A800263317 /* ViewController.m */; };
 		AA9A530E2140C8A800263317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9A530C2140C8A800263317 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA2C6F032140D2B2002C6823 /* NSObject+MTX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MTX.h"; sourceTree = "<group>"; };
+		AA2C6F042140D2B2002C6823 /* NSObject+MTX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MTX.m"; sourceTree = "<group>"; };
 		AA9A53032140C8A800263317 /* MTXKit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTXKit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9A53062140C8A800263317 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA9A53072140C8A800263317 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,9 +83,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA2C6EFD2140D1FD002C6823 /* MTXKit */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C6F012140D222002C6823 /* Base */,
+			);
+			name = MTXKit;
+			path = ../MTXKit;
+			sourceTree = "<group>";
+		};
+		AA2C6F012140D222002C6823 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C6F022140D229002C6823 /* Foundation */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AA2C6F022140D229002C6823 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C6F032140D2B2002C6823 /* NSObject+MTX.h */,
+				AA2C6F042140D2B2002C6823 /* NSObject+MTX.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		AA9A52FA2140C8A800263317 = {
 			isa = PBXGroup;
 			children = (
+				AA2C6EFD2140D1FD002C6823 /* MTXKit */,
 				AA9A53052140C8A800263317 /* MTXKit-Demo */,
 				AA9A53212140C8AB00263317 /* MTXKit-DemoTests */,
 				AA9A532C2140C8AB00263317 /* MTXKit-DemoUITests */,
@@ -266,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9A530B2140C8A800263317 /* ViewController.m in Sources */,
+				AA2C6F052140D2B2002C6823 /* NSObject+MTX.m in Sources */,
 				AA9A53112140C8A800263317 /* MTXKit_Demo.xcdatamodeld in Sources */,
 				AA9A53192140C8AB00263317 /* main.m in Sources */,
 				AA9A53082140C8A800263317 /* AppDelegate.m in Sources */,
