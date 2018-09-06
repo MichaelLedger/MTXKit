@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                    A collection of iOS components, hope you like it!
                    DESC
   s.homepage     = "https://github.com/MichaelLedger/MTXKit.git"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "MichaelLedger" => "MichaelLedger@163.com" }
   s.platform     = :ios, "6.0"
   s.ios.deployment_target = "6.0"
@@ -15,18 +15,8 @@ Pod::Spec.new do |s|
   s.source_files  = "MTXKit/**/*.{h,m}"
   s.public_header_files = "MTXKit/**/*.h"
 
-  s.frameworks = 'UIKit', 'CoreFoundation', 'CoreText', 'CoreGraphics', 'CoreImage', 'QuartzCore', 'ImageIO', 'AssetsLibrary', 'Accelerate', 'MobileCoreServices', 'SystemConfiguration'
-  s.ios.vendored_frameworks = 'Vendor/WebP.framework'
-
   s.libraries = 'z', 'sqlite3'
 
   s.requires_arc = true
-  
-  non_arc_files = ''
-  s.ios.exclude_files = non_arc_files
-  s.subspec 'no-arc' do |sna|
-    sna.requires_arc = false
-    sna.source_files = non_arc_files
-  end
 
 end
