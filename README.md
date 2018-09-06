@@ -1,2 +1,2 @@
 # MLKit
-MLKit for iOS~
+A collection of iOS components.
